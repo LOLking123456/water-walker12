@@ -1,0 +1,20 @@
+if game:GetService("CoreGui"):FindFirstChild("ScreenGui") then
+game:GetService("CoreGui").ScreenGui:Destroy()
+getgenv().Farming1 = false
+end
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/ui12/main/testing23"))()
+local client = game:GetService("Players").LocalPlayer
+local main = library:CreateWindow("Booga Booga Reborn")
+local folder = main:AddFolder('Main')
+
+folder:AddToggle({text = "Water-Walker", flag = "Free Water-Walker", callback = function(state)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/booga12/main/waterwalker"))()
+end})
+
+
+main:AddBind({text = "Toggle UI", key = "LeftControl", callback = function() library:Close() end})
+
+
+
+library:Init()
